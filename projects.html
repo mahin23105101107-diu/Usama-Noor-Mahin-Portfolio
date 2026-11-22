@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects &amp; Subnet Tool | Usama Noor Mahin</title>
+    <meta
+      name="description"
+      content="Enterprise LAN Network Design in Cisco Packet Tracer, VLAN addressing table, networking labs, and interactive IPv4 CIDR Subnet Calculator by Usama Noor Mahin."
+    />
+    <meta property="og:title" content="Projects &amp; Subnet Tool | Usama Noor Mahin" />
+    <meta
+      property="og:description"
+      content="Interactive Enterprise LAN topology, VLAN subnet plan, and IPv4 CIDR Subnet Calculator."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        document.documentElement.classList.add('js');
+        try {
+          var stored = localStorage.getItem('mahin-theme');
+          var prefersDark =
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand-btn" href="./index.html">Usama Noor Mahin</a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./about.html">About</a>
+          <a class="nav-link is-active" href="./projects.html" aria-current="page">Projects</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn-primary-sm" href="./contact.html">Get in touch</a>
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-nav-menu"
+            aria-label="Open navigation menu"
+          >
+            <svg id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+            <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-nav-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a class="mobile-nav-link" href="./index.html">Home</a>
+        <a class="mobile-nav-link" href="./about.html">About &amp; Education</a>
+        <a class="mobile-nav-link is-active" href="./projects.html" aria-current="page">Projects &amp; Subnet Tool</a>
+        <a class="mobile-nav-link" href="./contact.html">Contact Form</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- PAGE BANNER -->
+      <section class="tools-banner">
+        <div class="blob blob-pink-sm" aria-hidden="true"></div>
+        <div class="blob blob-teal-sm" aria-hidden="true"></div>
+        <div class="container tools-banner-inner">
+          <div class="tools-top-row">
+            <a class="btn-back" href="./index.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Back to Home
+            </a>
+
+            <div class="segmented-group" role="group" aria-label="Color theme">
+              <button type="button" class="seg-btn" data-theme-set="light" aria-pressed="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                </svg>
+                Light
+              </button>
+              <button type="button" class="seg-btn" data-theme-set="dark" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+                Dark
+              </button>
+            </div>
+          </div>
+
+          <div class="tools-header-row">
+            <div>
+              <h1>Network Architecture &amp; Subnet Lab</h1>
+              <p>Explore my Cisco Packet Tracer Enterprise LAN design, VLAN addressing plan, additional labs, and interactive IPv4 CIDR calculator.</p>
+            </div>
+            <div class="tools-jump-btns">
+              <a class="btn-outline-sm" href="#project">Enterprise LAN</a>
+              <a class="btn-outline-sm" href="#addressing-table">VLAN Table</a>
+              <a class="btn-outline-sm" href="#calculator">Subnet Tool</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECT: ENTERPRISE LAN -->
+      <section id="project" class="section surface-alt">
+        <div class="container">
+          <div class="section-head">
+            <div class="accent-bar bar-teal"></div>
+            <p class="kicker-teal">Academic Project · Cisco Packet Tracer</p>
+            <h2>Enterprise LAN Network Design</h2>
+            <p>
+              Designed a segmented corporate LAN separating HR, IT, and Sales departments into dedicated VLANs and /26 subnets interconnected via Router-on-a-Stick routing and Layer 2 switching. Select any device in the diagram to inspect its addressing and interface role.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <div class="topology-canvas-card">
+              <div class="topology-header">
+                <div>
+                  <h3>Interactive Logical Topology</h3>
+                  <p>802.1Q Trunk · Inter-VLAN Routing · 3 Isolated Subnets</p>
+                </div>
+                <div class="node-pills" role="group" aria-label="Select network device">
+                  <button type="button" class="node-btn is-active" data-node="router">R1</button>
+                  <button type="button" class="node-btn" data-node="switch">SW1</button>
+                  <button type="button" class="node-btn" data-node="hr">HR</button>
+                  <button type="button" class="node-btn" data-node="it">IT</button>
+                  <button type="button" class="node-btn" data-node="sales">SALES</button>
+                </div>
+              </div>
+
+              <svg
+                id="topology-svg"
+                viewBox="0 0 480 300"
+                role="img"
+                aria-label="Interactive Enterprise LAN topology diagram connecting Core Router R1 to Distribution Switch SW1 and three department VLANs: HR VLAN 10, IT VLAN 20, and Sales VLAN 30"
+              >
+                <g fill="none" stroke-linecap="round">
+                  <path id="link-r-sw" d="M240 66 L240 118" stroke="#F472B6" stroke-width="3" />
+                  <path id="link-sw-hr" d="M240 156 L84 218" stroke="#2DD4BF" stroke-width="2" />
+                  <path id="link-sw-it" d="M240 156 L240 218" stroke="#FBBF24" stroke-width="2" />
+                  <path id="link-sw-sales" d="M240 156 L396 218" stroke="#A78BFA" stroke-width="2" />
+                </g>
+
+                <text x="250" y="96" fill="#E2E8F0" font-size="10" font-family="JetBrains Mono, monospace">
+                  802.1Q Trunk
+                </text>
+
+                <g fill="#FFFFFF" stroke="#0F1538" stroke-width="1.5" aria-hidden="true">
+                  <circle r="4.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#link-r-sw" /></animateMotion></circle>
+                  <circle r="4.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.8s"><mpath href="#link-sw-hr" /></animateMotion></circle>
+                  <circle r="4.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s"><mpath href="#link-sw-it" /></animateMotion></circle>
+                  <circle r="4.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.6s"><mpath href="#link-sw-sales" /></animateMotion></circle>
+                </g>
+
+                <g class="svg-node" data-node="router" role="button" tabindex="0" aria-label="Inspect Core Router R1">
+                  <rect id="rect-router" x="170" y="16" width="140" height="50" rx="12" fill="#D92D84" stroke="#FBCFE8" stroke-width="2" />
+                  <text x="240" y="38" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">Core Router (R1)</text>
+                  <text x="240" y="54" text-anchor="middle" fill="#FCE7F3" font-size="10" font-family="JetBrains Mono, monospace">192.168.10.0/24</text>
+                </g>
+
+                <g class="svg-node" data-node="switch" role="button" tabindex="0" aria-label="Inspect Distribution Switch SW1">
+                  <rect id="rect-switch" x="160" y="118" width="160" height="42" rx="12" fill="#133A63" stroke="#1D8FEE" stroke-width="2" />
+                  <text x="240" y="138" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">Switch (SW1)</text>
+                  <text x="240" y="152" text-anchor="middle" fill="#E0F2FE" font-size="10" font-family="JetBrains Mono, monospace">VLAN 10 · 20 · 30</text>
+                </g>
+
+                <g class="svg-node" data-node="hr" role="button" tabindex="0" aria-label="Inspect HR Department VLAN 10">
+                  <rect id="rect-hr" x="18" y="218" width="132" height="62" rx="12" fill="#0E3F3D" stroke="#0A9D90" stroke-width="2" />
+                  <text x="84" y="240" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">HR Dept</text>
+                  <text x="84" y="256" text-anchor="middle" fill="#CCFBF1" font-size="10" font-family="JetBrains Mono, monospace">VLAN 10</text>
+                  <text x="84" y="270" text-anchor="middle" fill="#99F6E4" font-size="10" font-family="JetBrains Mono, monospace">192.168.10.0/26</text>
+                </g>
+
+                <g class="svg-node" data-node="it" role="button" tabindex="0" aria-label="Inspect IT Department VLAN 20">
+                  <rect id="rect-it" x="174" y="218" width="132" height="62" rx="12" fill="#4A2B09" stroke="#E69500" stroke-width="2" />
+                  <text x="240" y="240" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">IT Dept</text>
+                  <text x="240" y="256" text-anchor="middle" fill="#FEF3C7" font-size="10" font-family="JetBrains Mono, monospace">VLAN 20</text>
+                  <text x="240" y="270" text-anchor="middle" fill="#FDE68A" font-size="10" font-family="JetBrains Mono, monospace">192.168.10.64/26</text>
+                </g>
+
+                <g class="svg-node" data-node="sales" role="button" tabindex="0" aria-label="Inspect Sales Department VLAN 30">
+                  <rect id="rect-sales" x="330" y="218" width="132" height="62" rx="12" fill="#2E1E59" stroke="#7C4DDB" stroke-width="2" />
+                  <text x="396" y="240" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">Sales Dept</text>
+                  <text x="396" y="256" text-anchor="middle" fill="#EDE9FE" font-size="10" font-family="JetBrains Mono, monospace">VLAN 30</text>
+                  <text x="396" y="270" text-anchor="middle" fill="#DDD6FE" font-size="10" font-family="JetBrains Mono, monospace">192.168.10.128/26</text>
+                </g>
+              </svg>
+
+              <p class="topology-tech">
+                Technologies: Cisco Packet Tracer · VLAN · Subnetting · Inter-VLAN Routing · Switching
+              </p>
+            </div>
+
+            <div class="inspector-card">
+              <div>
+                <p id="node-sublabel" class="inspector-kicker">Selected Node · Router-on-a-Stick</p>
+                <h3 id="node-label">Core Router (R1)</h3>
+                <p id="node-notes" class="inspector-notes">
+                  Routes traffic across HR, IT, and Sales subnets using 802.1Q sub-interfaces while enforcing ACL isolation policies.
+                </p>
+
+                <dl class="inspector-dl">
+                  <div>
+                    <dt>Role</dt>
+                    <dd id="node-role">Inter-VLAN Routing &amp; NAT Gateway</dd>
+                  </div>
+                  <div>
+                    <dt>Subnet</dt>
+                    <dd id="node-subnet" class="mono tabular accent-indigo">192.168.10.0/24 (Summarized LAN)</dd>
+                  </div>
+                  <div>
+                    <dt>Gateway</dt>
+                    <dd id="node-gateway" class="mono tabular">Gi0/0.10 · .20 · .30 Sub-interfaces</dd>
+                  </div>
+                  <div>
+                    <dt>VLAN Scope</dt>
+                    <dd id="node-vlan" class="mono tabular accent-teal">802.1Q Trunk Encapsulation</dd>
+                  </div>
+                  <div>
+                    <dt>Interfaces</dt>
+                    <dd id="node-interfaces" class="mono tabular">Gi0/0 → SW1 Trunk · Gi0/1 → WAN Uplink</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="inspector-footer">
+                <span>Verify these subnets directly in the calculator below</span>
+                <a class="link-pink" href="#calculator">Open Subnet Tool</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- VLAN & IP ADDRESSING TABLE -->
+          <div id="addressing-table" class="table-wrap reveal">
+            <table class="data-table">
+              <caption>Enterprise LAN — VLAN &amp; IPv4 Subnet Addressing Plan</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Department / Role</th>
+                  <th scope="col">VLAN ID</th>
+                  <th scope="col">Network CIDR</th>
+                  <th scope="col">Default Gateway</th>
+                  <th scope="col">Usable Host Range</th>
+                  <th scope="col">Switch Ports</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>HR Department</strong></td>
+                  <td class="mono tabular">VLAN 10</td>
+                  <td class="mono tabular accent-indigo">192.168.10.0/26</td>
+                  <td class="mono tabular">192.168.10.1</td>
+                  <td class="mono tabular">192.168.10.2 – 192.168.10.62</td>
+                  <td class="mono">SW1 Fa0/2 – Fa0/8</td>
+                </tr>
+                <tr>
+                  <td><strong>IT Department</strong></td>
+                  <td class="mono tabular">VLAN 20</td>
+                  <td class="mono tabular accent-indigo">192.168.10.64/26</td>
+                  <td class="mono tabular">192.168.10.65</td>
+                  <td class="mono tabular">192.168.10.66 – 192.168.10.126</td>
+                  <td class="mono">SW1 Fa0/9 – Fa0/16</td>
+                </tr>
+                <tr>
+                  <td><strong>Sales Department</strong></td>
+                  <td class="mono tabular">VLAN 30</td>
+                  <td class="mono tabular accent-indigo">192.168.10.128/26</td>
+                  <td class="mono tabular">192.168.10.129</td>
+                  <td class="mono tabular">192.168.10.130 – 192.168.10.190</td>
+                  <td class="mono">SW1 Fa0/17 – Fa0/24</td>
+                </tr>
+                <tr>
+                  <td><strong>Management</strong></td>
+                  <td class="mono tabular">VLAN 99</td>
+                  <td class="mono tabular accent-teal">192.168.99.0/28</td>
+                  <td class="mono tabular">192.168.99.1</td>
+                  <td class="mono tabular">192.168.99.2 – 192.168.99.14</td>
+                  <td class="mono">SVI · SSH Admin Only</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPLEMENTATION STEPS & ADDITIONAL LABS -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="accent-bar bar-indigo"></div>
+            <h2>Lab execution steps &amp; additional builds</h2>
+            <p>The ordered sequence used to deploy the Enterprise LAN topology alongside other CCNA and MikroTik labs I practice.</p>
+          </div>
+
+          <div class="workflow-grid">
+            <ol class="step-list reveal">
+              <li>
+                <div>
+                  <h3>Create VLANs and Assign Access Ports on SW1</h3>
+                  <p>Defined VLANs 10, 20, 30, and 99, bound switchport ranges in access mode, and enabled port security on unused interfaces.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Configure 802.1Q Trunk &amp; Router-on-a-Stick</h3>
+                  <p>Set SW1 Fa0/1 to trunk mode and created R1 sub-interfaces Gi0/0.10, Gi0/0.20, and Gi0/0.30 with dot1Q tagging.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Apply DHCP, NAT/PAT &amp; ACL Policies</h3>
+                  <p>Configured per-VLAN IP pools, outbound NAT overload on R1 Gi0/1, and explicit SSH administrative access restricted to IT VLAN 20.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Validate Connectivity &amp; Broadcast Isolation</h3>
+                  <p>Verified cross-VLAN pings, traceroute hops through R1, and confirmed broadcast containment within each /26 subnet.</p>
+                </div>
+              </li>
+            </ol>
+
+            <aside class="card reveal">
+              <div class="card-top-bar bar-pink"></div>
+              <span class="card-index mono">More Lab Projects</span>
+              <h3>Additional Networking Builds</h3>
+              <p class="card-desc">Hands-on configurations built during CCNA, MTCNA, and CSE coursework:</p>
+              <ul class="dot-list">
+                <li><strong>MikroTik ISP Gateway Lab:</strong> PPPoE server provisioning, IP pools, masquerade NAT, and Simple Queue per-client bandwidth caps in WinBox.</li>
+                <li><strong>Switch Redundancy &amp; Aggregation:</strong> Rapid STP root bridge election paired with LACP EtherChannel links between distribution switches.</li>
+                <li><strong>Personal Portfolio &amp; Subnet Tool:</strong> Multi-page HTML5, CSS3, and vanilla JavaScript site with live bitwise CIDR calculator.</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBNET CALCULATOR -->
+      <section id="calculator" class="section surface-alt">
+        <div class="container calc-grid">
+          <div>
+            <div class="accent-bar bar-pink"></div>
+            <h2>IPv4 Subnet Calculator</h2>
+            <p class="calc-lead">
+              Subnetting is one of my favourite parts of CCNA and MTCNA practice, so I built a quick CIDR calculator. Enter any IPv4 address with a prefix length or test one of the preset lab subnets.
+            </p>
+
+            <div class="presets-wrap">
+              <p class="presets-label">Quick lab presets</p>
+              <div class="presets-grid">
+                <button type="button" class="preset-btn is-active" data-cidr="192.168.10.37/26">
+                  <strong>HR VLAN 10</strong>
+                  <span class="mono tabular">192.168.10.37/26</span>
+                </button>
+                <button type="button" class="preset-btn" data-cidr="10.10.20.14/28">
+                  <strong>IT VLAN 20</strong>
+                  <span class="mono tabular">10.10.20.14/28</span>
+                </button>
+                <button type="button" class="preset-btn" data-cidr="172.16.0.1/30">
+                  <strong>WAN Link</strong>
+                  <span class="mono tabular">172.16.0.1/30</span>
+                </button>
+                <button type="button" class="preset-btn" data-cidr="192.168.1.45/24">
+                  <strong>Office LAN</strong>
+                  <span class="mono tabular">192.168.1.45/24</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-card">
+            <div class="card-top-bar bar-rainbow"></div>
+            <form id="subnet-form" novalidate>
+              <label for="cidr-input">IPv4 Address / CIDR Prefix</label>
+              <div class="calc-input-row">
+                <input
+                  id="cidr-input"
+                  type="text"
+                  inputmode="text"
+                  value="192.168.10.37/26"
+                  placeholder="192.168.10.37/26"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+                <button type="submit" class="btn-gradient">Calculate</button>
+              </div>
+            </form>
+
+            <p id="subnet-error" class="calc-error" role="alert" hidden></p>
+
+            <div id="subnet-output">
+              <div class="calc-meta-row">
+                <span id="subnet-scope">Private (RFC 1918 · Class C)</span>
+                <button type="button" id="copy-subnet-btn" class="copy-btn">
+                  <span id="copy-subnet-label">Copy summary</span>
+                </button>
+              </div>
+
+              <dl class="calc-results" id="subnet-dl"></dl>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="footer-year">2026</span> Usama Noor Mahin · Daffodil International University · Mirpur-14, Dhaka</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a class="footer-link" href="./index.html">Home</a>
+          <a class="footer-link" href="./about.html">About</a>
+          <a class="footer-link" href="./projects.html">Projects</a>
+          <a class="footer-link" href="./contact.html">Contact</a>
+        </nav>
+        <button type="button" id="back-to-top" class="footer-top-btn">Back to top</button>
+      </div>
+    </footer>
+  </body>
+</html>

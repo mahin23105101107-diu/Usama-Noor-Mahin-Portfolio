@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usama Noor Mahin | Aspiring Network Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Usama Noor Mahin, Computer Science & Engineering student at Daffodil International University trained in CCNA and MTCNA."
+    />
+    <meta property="og:title" content="Usama Noor Mahin | Aspiring Network Engineer" />
+    <meta
+      property="og:description"
+      content="Portfolio of Usama Noor Mahin, Computer Science & Engineering student at Daffodil International University trained in CCNA and MTCNA."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        document.documentElement.classList.add('js');
+        try {
+          var stored = localStorage.getItem('mahin-theme');
+          var prefersDark =
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand-btn" href="./index.html">Usama Noor Mahin</a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="nav-link is-active" href="./index.html" aria-current="page">Home</a>
+          <a class="nav-link" href="./about.html">About</a>
+          <a class="nav-link" href="./projects.html">Projects</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn-primary-sm" href="./contact.html">Get in touch</a>
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-nav-menu"
+            aria-label="Open navigation menu"
+          >
+            <svg id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+            <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-nav-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a class="mobile-nav-link is-active" href="./index.html" aria-current="page">Home</a>
+        <a class="mobile-nav-link" href="./about.html">About &amp; Education</a>
+        <a class="mobile-nav-link" href="./projects.html">Projects &amp; Subnet Tool</a>
+        <a class="mobile-nav-link" href="./contact.html">Contact Form</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero-section">
+        <div class="blob blob-amber" aria-hidden="true"></div>
+        <div class="blob blob-indigo" aria-hidden="true"></div>
+        <div class="blob blob-pink" aria-hidden="true"></div>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+        <div class="container hero-inner">
+          <div class="hero-toolbar">
+            <div class="segmented-group" role="group" aria-label="Hero backdrop motion">
+              <button type="button" class="seg-btn is-active" data-canvas-mode="waves" aria-pressed="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                  <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                  <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                </svg>
+                Waves
+              </button>
+              <button type="button" class="seg-btn" data-canvas-mode="network" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="16" y="16" width="6" height="6" rx="1" />
+                  <rect x="2" y="16" width="6" height="6" rx="1" />
+                  <rect x="9" y="2" width="6" height="6" rx="1" />
+                  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+                  <path d="M12 12V8" />
+                </svg>
+                Mesh
+              </button>
+            </div>
+
+            <div class="segmented-group" role="group" aria-label="Color theme">
+              <button type="button" class="seg-btn" data-theme-set="light" aria-pressed="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                </svg>
+                Light
+              </button>
+              <button type="button" class="seg-btn" data-theme-set="dark" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+                Dark
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-copy reveal">
+              <h1>Hi, I’m Usama Noor Mahin</h1>
+              <p class="hero-role">Aspiring Network Engineer</p>
+              <p class="hero-lead">
+                Computer Science &amp; Engineering student at Daffodil International University in Dhaka, trained in CCNA and MTCNA. I learn best by building labs, configuring routers and switches, and troubleshooting real network topologies.
+              </p>
+              <div class="hero-cta">
+                <a href="./contact.html" class="btn-gradient">
+                  Get in touch
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="./projects.html" class="btn-outline">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+                    <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+                    <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+                  </svg>
+                  Projects &amp; Subnet Tool
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-portrait-col reveal">
+              <div class="portrait-frame">
+                <figure class="portrait-card">
+                  <img
+                    id="portrait-img"
+                    src="./assets/portrait.jpg"
+                    alt="Portrait of Usama Noor Mahin, Computer Science and Engineering student at Daffodil International University"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div id="portrait-fallback" class="portrait-fallback" hidden>
+                    <strong>Usama Noor Mahin</strong>
+                    <span>Daffodil International University</span>
+                  </div>
+                  <figcaption>
+                    <strong>Usama Noor Mahin</strong>
+                    <span>B.Sc. in Computer Science &amp; Engineering · Daffodil International University</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <dl class="credential-strip reveal">
+            <div>
+              <dt class="accent-indigo">University</dt>
+              <dd>Daffodil International University</dd>
+            </div>
+            <div>
+              <dt class="accent-pink">Degree</dt>
+              <dd>B.Sc. in CSE · 2023–2026</dd>
+            </div>
+            <div>
+              <dt class="accent-teal">Training</dt>
+              <dd>CCNA &amp; MTCNA Courses</dd>
+            </div>
+            <div>
+              <dt class="accent-amber">Location</dt>
+              <dd>Mirpur-14, Dhaka</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- MULTI-PAGE DIRECTORY -->
+      <section class="section surface-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="accent-bar bar-indigo"></div>
+            <h2>Explore my portfolio</h2>
+            <p>Each section lives on its own dedicated page so recruiters, instructors, and engineers can inspect my background, lab architecture, and contact form cleanly.</p>
+          </div>
+
+          <div class="explore-grid">
+            <article class="card explore-card reveal">
+              <div class="card-top-bar bar-sky"></div>
+              <div>
+                <span class="card-index mono">Page 01.</span>
+                <h3>About, Education &amp; Skills</h3>
+                <p class="card-desc">
+                  Read my background at Daffodil International University, inspect my education and technical skills tables, and filter my CCNA and MTCNA training modules.
+                </p>
+              </div>
+              <a class="card-link-row" href="./about.html">
+                Open About page
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+
+            <article class="card explore-card reveal">
+              <div class="card-top-bar bar-teal"></div>
+              <div>
+                <span class="card-index mono">Page 02.</span>
+                <h3>Projects &amp; Subnet Calculator</h3>
+                <p class="card-desc">
+                  Inspect my Enterprise LAN Cisco Packet Tracer topology interactively, review the VLAN addressing table, and run live IPv4 CIDR calculations.
+                </p>
+              </div>
+              <a class="card-link-row" href="./projects.html">
+                Open Projects page
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+
+            <article class="card explore-card reveal">
+              <div class="card-top-bar bar-pink"></div>
+              <div>
+                <span class="card-index mono">Page 03.</span>
+                <h3>Contact &amp; Inquiry Form</h3>
+                <p class="card-desc">
+                  Reach out for entry-level Network Engineer roles, internships, or lab discussions via direct email, phone, or the validated multi-field contact form.
+                </p>
+              </div>
+              <a class="card-link-row" href="./contact.html">
+                Open Contact page
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENGINEERING WORKFLOW (ORDERED & UNORDERED LISTS) -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="accent-bar bar-amber"></div>
+            <h2>How I approach a network build</h2>
+            <p>Whether designing a multi-department office LAN in Cisco Packet Tracer or provisioning a MikroTik gateway in WinBox, I follow a structured four-stage process.</p>
+          </div>
+
+          <div class="workflow-grid">
+            <ol class="step-list reveal">
+              <li>
+                <div>
+                  <h3>IP Addressing &amp; Subnet Planning</h3>
+                  <p>Calculate departmental host counts first and allocate clean VLSM / CIDR blocks with room for future growth before touching any CLI.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Logical Topology &amp; VLAN Segmentation</h3>
+                  <p>Separate HR, IT, Sales, and Management broadcast domains on Layer 2 switches and map 802.1Q trunk uplinks to the core router.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Routing, Hardening &amp; Policy Setup</h3>
+                  <p>Configure Router-on-a-Stick sub-interfaces, DHCP pools, NAT/PAT translation, SSH management, port security, and explicit ACL rules.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>End-to-End Verification &amp; Documentation</h3>
+                  <p>Confirm reachability and isolation across subnets, then record interface tables and addressing diagrams for repeatable troubleshooting.</p>
+                </div>
+              </li>
+            </ol>
+
+            <aside class="card reveal">
+              <div class="card-top-bar bar-teal"></div>
+              <span class="card-index mono">Lab Reference</span>
+              <h3>Core Verification Toolkit</h3>
+              <p class="card-desc">Commands and diagnostic checks I rely on in Cisco IOS and MikroTik RouterOS labs:</p>
+              <ul class="clean-list mono">
+                <li>show vlan brief &amp; show interfaces trunk</li>
+                <li>show ip interface brief &amp; show ip route</li>
+                <li>ping &amp; traceroute across VLAN gateways</li>
+                <li>show access-lists &amp; show ip nat translations</li>
+                <li>/ip address print &amp; /ip firewall filter print</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT BANNER -->
+      <section class="section surface-alt">
+        <div class="container">
+          <div class="contact-banner reveal">
+            <div class="contact-copy">
+              <p class="contact-kicker">Available for Entry-Level Network Engineering &amp; Internships</p>
+              <h2>Let’s talk networks</h2>
+              <p>
+                I am ready to contribute to network operations, support, and infrastructure teams in Dhaka or remotely. Use the contact form or reach out directly.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <div class="contact-email-row">
+                <a class="contact-email-btn" href="./contact.html">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <span>Open Contact Form</span>
+                </a>
+                <button type="button" id="copy-email-btn" class="contact-copy-btn" aria-label="Copy email address">
+                  <span id="copy-email-label">Copy email</span>
+                </button>
+              </div>
+              <a class="contact-phone-btn mono tabular" href="tel:+8801971836715">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>+880 1971 836715</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="footer-year">2026</span> Usama Noor Mahin · Daffodil International University · Mirpur-14, Dhaka</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a class="footer-link" href="./index.html">Home</a>
+          <a class="footer-link" href="./about.html">About</a>
+          <a class="footer-link" href="./projects.html">Projects</a>
+          <a class="footer-link" href="./contact.html">Contact</a>
+        </nav>
+        <button type="button" id="back-to-top" class="footer-top-btn">Back to top</button>
+      </div>
+    </footer>
+  </body>
+</html>

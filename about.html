@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About &amp; Education | Usama Noor Mahin</title>
+    <meta
+      name="description"
+      content="Academic background, education table, networking skills, and CCNA/MTCNA training of Usama Noor Mahin at Daffodil International University."
+    />
+    <meta property="og:title" content="About &amp; Education | Usama Noor Mahin" />
+    <meta
+      property="og:description"
+      content="Academic background, education table, networking skills, and CCNA/MTCNA training of Usama Noor Mahin."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        document.documentElement.classList.add('js');
+        try {
+          var stored = localStorage.getItem('mahin-theme');
+          var prefersDark =
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand-btn" href="./index.html">Usama Noor Mahin</a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link is-active" href="./about.html" aria-current="page">About</a>
+          <a class="nav-link" href="./projects.html">Projects</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn-primary-sm" href="./contact.html">Get in touch</a>
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-nav-menu"
+            aria-label="Open navigation menu"
+          >
+            <svg id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+            <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-nav-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a class="mobile-nav-link" href="./index.html">Home</a>
+        <a class="mobile-nav-link is-active" href="./about.html" aria-current="page">About &amp; Education</a>
+        <a class="mobile-nav-link" href="./projects.html">Projects &amp; Subnet Tool</a>
+        <a class="mobile-nav-link" href="./contact.html">Contact Form</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- PAGE BANNER -->
+      <section class="tools-banner">
+        <div class="blob blob-pink-sm" aria-hidden="true"></div>
+        <div class="blob blob-teal-sm" aria-hidden="true"></div>
+        <div class="container tools-banner-inner">
+          <div class="tools-top-row">
+            <a class="btn-back" href="./index.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Back to Home
+            </a>
+
+            <div class="segmented-group" role="group" aria-label="Color theme">
+              <button type="button" class="seg-btn" data-theme-set="light" aria-pressed="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                </svg>
+                Light
+              </button>
+              <button type="button" class="seg-btn" data-theme-set="dark" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+                Dark
+              </button>
+            </div>
+          </div>
+
+          <div class="tools-header-row">
+            <div>
+              <h1>About, Education &amp; Skills</h1>
+              <p>My academic path in Computer Science &amp; Engineering, structured CCNA &amp; MTCNA training, and core networking competencies.</p>
+            </div>
+            <div class="tools-jump-btns">
+              <a class="btn-outline-sm" href="#education">Education Table</a>
+              <a class="btn-outline-sm" href="#skills">Skills Matrix</a>
+              <a class="btn-outline-sm" href="#training">Training Labs</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIOGRAPHY & PORTRAIT -->
+      <section id="about" class="section surface-alt">
+        <div class="container about-grid">
+          <div class="reveal">
+            <div class="accent-bar bar-sky"></div>
+            <h2>About me</h2>
+            <div class="prose">
+              <p>
+                I am pursuing a B.Sc. in Computer Science and Engineering at Daffodil International University, where computer networking quickly became the discipline I enjoy most. Through structured training in CCNA and MTCNA at Creative IT Institute, I built a strong foundation in IPv4 subnetting, routing, switching, VLAN segmentation, and router administration.
+              </p>
+              <p>
+                I prefer hands-on lab work over passive slides—most of my understanding comes from designing multi-department topologies, breaking configurations intentionally, and diagnosing them step by step. I am now seeking an entry-level Network Engineer role or internship where I can work on production infrastructure and continue growing.
+              </p>
+            </div>
+
+            <dl class="about-meta">
+              <div>
+                <dt>Languages</dt>
+                <dd>Bangla, English</dd>
+              </div>
+              <div>
+                <dt>Expected Graduation</dt>
+                <dd class="accent-indigo tabular">2026</dd>
+              </div>
+              <div>
+                <dt>Base</dt>
+                <dd>Mirpur-14, Dhaka</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="about-portrait-col reveal">
+            <div class="portrait-frame">
+              <figure class="portrait-card">
+                <img
+                  id="portrait-img"
+                  src="./assets/portrait.jpg"
+                  alt="Portrait of Usama Noor Mahin — CSE Student and Aspiring Network Engineer"
+                  referrerpolicy="no-referrer"
+                />
+                <div id="portrait-fallback" class="portrait-fallback" hidden>
+                  <strong>Usama Noor Mahin</strong>
+                  <span>Daffodil International University</span>
+                </div>
+                <figcaption>
+                  <strong>Usama Noor Mahin</strong>
+                  <span>B.Sc. in CSE · Daffodil International University · CCNA &amp; MTCNA Trained</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION TABLE -->
+      <section id="education" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="accent-bar bar-indigo"></div>
+            <h2>Education &amp; academic record</h2>
+            <p>A concise overview of my university degree and secondary academic milestones in Dhaka, Bangladesh.</p>
+          </div>
+
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption>Academic Qualifications — Usama Noor Mahin</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Degree / Certificate</th>
+                  <th scope="col">Institution</th>
+                  <th scope="col">Timeline</th>
+                  <th scope="col">Result / Status</th>
+                  <th scope="col">Key Focus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>B.Sc. in Computer Science &amp; Engineering</strong></td>
+                  <td>Daffodil International University</td>
+                  <td class="mono tabular">2023 – 2026</td>
+                  <td class="mono accent-indigo">In Progress (Expected 2026)</td>
+                  <td>Computer Networks, Web Engineering, Operating Systems</td>
+                </tr>
+                <tr>
+                  <td><strong>Higher Secondary Certificate (HSC)</strong></td>
+                  <td>Shaheed Police Smrity College</td>
+                  <td class="mono tabular">2021</td>
+                  <td class="mono tabular accent-teal">GPA 5.00 / 5.00</td>
+                  <td>Science Group (Physics, Chemistry, Higher Mathematics, ICT)</td>
+                </tr>
+                <tr>
+                  <td><strong>Secondary School Certificate (SSC)</strong></td>
+                  <td>Shaheed Police Smrity College</td>
+                  <td class="mono tabular">2019</td>
+                  <td class="mono tabular accent-pink">GPA 5.00 / 5.00</td>
+                  <td>Science Group — Distinction</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS & MATRIX TABLE -->
+      <section id="skills" class="section surface-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="accent-bar bar-pink"></div>
+            <h2>Technical skills &amp; engineering workflow</h2>
+            <p>What I can configure on network hardware, the tools I document with, and how I approach troubleshooting.</p>
+          </div>
+
+          <div class="cards-3">
+            <article class="card reveal">
+              <div class="card-top-bar bar-teal"></div>
+              <span class="card-index mono">01.</span>
+              <h3>Networking &amp; Protocols</h3>
+              <p class="card-desc">Core routing, switching, and address planning competencies.</p>
+              <ul class="clean-list">
+                <li>Computer Networking</li>
+                <li>IP Addressing &amp; Subnetting</li>
+                <li>Routing &amp; Switching</li>
+                <li>VLAN &amp; Inter-VLAN Routing</li>
+                <li>MikroTik RouterOS</li>
+                <li>Network Configuration</li>
+              </ul>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-top-bar bar-sky"></div>
+              <span class="card-index mono">02.</span>
+              <h3>Tools &amp; Platforms</h3>
+              <p class="card-desc">Simulation, management, and technical documentation stack.</p>
+              <ul class="clean-list">
+                <li>Cisco Packet Tracer</li>
+                <li>MikroTik WinBox</li>
+                <li>Git &amp; GitHub</li>
+                <li>HTML5, CSS3 &amp; JavaScript</li>
+                <li>Microsoft Office &amp; Canva</li>
+              </ul>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-top-bar bar-amber"></div>
+              <span class="card-index mono">03.</span>
+              <h3>Engineering Habits</h3>
+              <p class="card-desc">How I collaborate and approach infrastructure faults.</p>
+              <ul class="clean-list">
+                <li>Systematic Troubleshooting</li>
+                <li>Teamwork</li>
+                <li>Clear Communication</li>
+                <li>Time Management</li>
+                <li>Rapid Technical Learning</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="table-wrap reveal">
+            <table class="data-table">
+              <caption>Technical Skills &amp; Lab Competency Matrix</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Skill Domain</th>
+                  <th scope="col">Proficiency</th>
+                  <th scope="col">Protocols &amp; Technologies</th>
+                  <th scope="col">Primary Tools</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>IPv4 Addressing &amp; VLSM</strong></td>
+                  <td class="accent-teal"><strong>Strong</strong></td>
+                  <td>CIDR Subnetting, Wildcard Masks, RFC 1918 Planning</td>
+                  <td class="mono">Packet Tracer, Custom JS Calculator</td>
+                </tr>
+                <tr>
+                  <td><strong>Cisco Routing &amp; Switching</strong></td>
+                  <td class="accent-indigo"><strong>Hands-On</strong></td>
+                  <td>VLAN, 802.1Q Trunking, VTP, STP, EtherChannel, Static/Dynamic Routing</td>
+                  <td class="mono">Cisco IOS CLI, Packet Tracer</td>
+                </tr>
+                <tr>
+                  <td><strong>MikroTik Administration</strong></td>
+                  <td class="accent-indigo"><strong>Hands-On</strong></td>
+                  <td>PPPoE Server, DHCP Pools, Firewall Filters, NAT, Simple Queues</td>
+                  <td class="mono">MikroTik WinBox, RouterOS</td>
+                </tr>
+                <tr>
+                  <td><strong>Web &amp; Documentation</strong></td>
+                  <td class="accent-amber"><strong>Proficient</strong></td>
+                  <td>Semantic HTML5, Responsive CSS3, Vanilla JS, Technical Diagrams</td>
+                  <td class="mono">VS Code, Git, GitHub Pages</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRAINING & FILTERABLE ACHIEVEMENTS -->
+      <section id="training" class="section">
+        <div class="container">
+          <div class="training-head">
+            <div class="section-head reveal">
+              <div class="accent-bar bar-amber"></div>
+              <h2>Training &amp; lab achievements</h2>
+              <p>CCNA and MTCNA training completed at Creative IT Institute with continuous Packet Tracer and WinBox lab work.</p>
+            </div>
+
+            <div class="filter-tabs" role="tablist" aria-label="Filter training records">
+              <button type="button" class="filter-btn is-active" role="tab" aria-selected="true" data-training-filter="all">
+                All Training
+              </button>
+              <button type="button" class="filter-btn" role="tab" aria-selected="false" data-training-filter="ccna">
+                CCNA · Cisco
+              </button>
+              <button type="button" class="filter-btn" role="tab" aria-selected="false" data-training-filter="mtcna">
+                MTCNA · MikroTik
+              </button>
+              <button type="button" class="filter-btn" role="tab" aria-selected="false" data-training-filter="lab">
+                Lab Practice
+              </button>
+            </div>
+          </div>
+
+          <div class="cards-3" id="training-grid">
+            <article class="card training-card" data-category="ccna">
+              <div class="card-top-bar bar-sky"></div>
+              <p class="card-meta">Creative IT Institute · Cisco Packet Tracer Labs</p>
+              <h3>CCNA — Cisco Networking</h3>
+              <p class="card-desc">Configured enterprise switching and routed topologies end to end in Cisco Packet Tracer.</p>
+              <ul class="dot-list">
+                <li>IPv4 addressing, CIDR subnetting, static &amp; dynamic routing</li>
+                <li>VLAN segmentation, VTP, STP, and EtherChannel link aggregation</li>
+                <li>Access Control Lists (ACL), NAT/PAT, VPN, and PPPoE</li>
+                <li>Device hardening via SSH/Telnet management and switch port security</li>
+              </ul>
+            </article>
+
+            <article class="card training-card" data-category="mtcna">
+              <div class="card-top-bar bar-pink"></div>
+              <p class="card-meta">Creative IT Institute · WinBox &amp; RouterOS Practice</p>
+              <h3>MTCNA — MikroTik RouterOS</h3>
+              <p class="card-desc">Managed MikroTik gateways, ISP-style client provisioning, and traffic shaping using WinBox.</p>
+              <ul class="dot-list">
+                <li>DHCP server/client, IP pools, ARP/MAC binding, and bridging</li>
+                <li>Static routing, wireless configuration, and PPPoE server setup</li>
+                <li>Firewall filter rules, source/destination NAT, and tunnelling</li>
+                <li>Simple queues and bandwidth control policies for client networks</li>
+              </ul>
+            </article>
+
+            <article class="card training-card" data-category="lab">
+              <div class="card-top-bar bar-teal"></div>
+              <p class="card-meta">Independent &amp; Academic Labs · Ongoing</p>
+              <h3>Hands-On Network Lab Practice</h3>
+              <p class="card-desc">Applied CCNA and MTCNA concepts across multi-subnet office designs and fault isolation drills.</p>
+              <ul class="dot-list">
+                <li>Designing segmented department LANs with clean IP addressing plans</li>
+                <li>Verifying end-to-end reachability using ping, traceroute, and ARP tables</li>
+                <li>Documenting interface allocations, trunk links, and gateway policies</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXTERNAL ACADEMIC & CERTIFICATION LINKS -->
+      <section class="section surface-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="accent-bar bar-teal"></div>
+            <h2>Institutions &amp; technical resources</h2>
+            <p>External links to my university, training platforms, and official networking curriculum documentation.</p>
+          </div>
+
+          <div class="ext-links-grid reveal">
+            <a class="ext-link-card" href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener noreferrer">
+              <strong>Daffodil International University</strong>
+              <span>B.Sc. in Computer Science &amp; Engineering ↗</span>
+            </a>
+            <a class="ext-link-card" href="https://www.netacad.com/" target="_blank" rel="noopener noreferrer">
+              <strong>Cisco Networking Academy</strong>
+              <span>CCNA Routing &amp; Switching Reference ↗</span>
+            </a>
+            <a class="ext-link-card" href="https://mikrotik.com/training/about" target="_blank" rel="noopener noreferrer">
+              <strong>MikroTik Training (MTCNA)</strong>
+              <span>RouterOS Official Documentation ↗</span>
+            </a>
+            <a class="ext-link-card" href="https://www.creativeitinstitute.com/" target="_blank" rel="noopener noreferrer">
+              <strong>Creative IT Institute</strong>
+              <span>CCNA &amp; MTCNA Practical Training ↗</span>
+            </a>
+          </div>
+
+          <div class="hero-cta reveal">
+            <a class="btn-gradient" href="./projects.html">Explore Projects &amp; Subnet Tool</a>
+            <a class="btn-outline" href="./contact.html">Contact Me</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="footer-year">2026</span> Usama Noor Mahin · Daffodil International University · Mirpur-14, Dhaka</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a class="footer-link" href="./index.html">Home</a>
+          <a class="footer-link" href="./about.html">About</a>
+          <a class="footer-link" href="./projects.html">Projects</a>
+          <a class="footer-link" href="./contact.html">Contact</a>
+        </nav>
+        <button type="button" id="back-to-top" class="footer-top-btn">Back to top</button>
+      </div>
+    </footer>
+  </body>
+</html>
